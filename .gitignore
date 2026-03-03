@@ -1,0 +1,49 @@
+# =========================
+# Java compiled files
+# =========================
+*.class
+*.log
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# =========================
+# Eclipse files
+# =========================
+.metadata/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+
+# Eclipse project files
+.project
+.classpath
+.settings/
+
+# =========================
+# Maven
+# =========================
+target/
+
+# =========================
+# Gradle
+# =========================
+.gradle/
+build/
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
