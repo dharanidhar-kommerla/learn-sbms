@@ -12,5 +12,7 @@ public class Car {
 		} else {
 			System.out.println("Problem in Engine");
 		}
+		System.out.println("HAS-A Relation. Classes are tightly coupled");
+
 	}
 }
