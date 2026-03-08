@@ -9,7 +9,6 @@ public class DebitCardPayment implements IPayment {
 		System.out.println("CrediCardPayment::Constructor");
 	}
 	
-	@SuppressWarnings("finally")
 	public boolean makePayment(double amount) {
 		try {
 			if(amount>0) {
