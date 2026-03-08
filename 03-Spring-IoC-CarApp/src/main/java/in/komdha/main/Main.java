@@ -10,6 +10,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		// starting the IoC 
+		@SuppressWarnings("resource")
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring-beans.xml");
 		
 		// getting the object from IoC
