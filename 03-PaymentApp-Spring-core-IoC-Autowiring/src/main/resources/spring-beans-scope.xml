@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Objects are created while Starting of IoC Container -->
+	<bean id="credit-payment" class="in.komdha.dependentclasses.CreditCardPayment" scope="singleton"/>
+	
+	
+	<!-- Constructor + singleton :: starting -->
+		<!-- Object is created once while starting of IoC container -->
+		<!-- <bean id="debit-payment" class = "in.komdha.dependentclasses.DebitCardPayment" scope="singleton" /> -->
+		
+		<!-- constructor injection -->
+		<!-- <bean id="paymentprocessor" class = "in.komdha.targetclasses.PaymentProcessor">
+			<constructor-arg name="payment" ref="debit-payment"/>
+		</bean> -->
+	<!-- Constructor + singleton :: ending -->
+
+	<!-- Constructor + prototype :: starting -->
+		<!-- Object are created when setter method is called -->
+		<bean id="debit-payment" class = "in.komdha.dependentclasses.DebitCardPayment"  scope="prototype"/>
+			
+		<!-- setter injection -->
+		<bean id="paymentprocessor" class = "in.komdha.targetclasses.PaymentProcessor" scope="prototype">
+			<property name="payment" ref="debit-payment"/>
+		</bean>
+	<!-- Constructor + prototype :: ending -->
+	
+</beans>
